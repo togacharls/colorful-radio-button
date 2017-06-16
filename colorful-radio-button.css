@@ -1,0 +1,65 @@
+input[type="radio"]{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    margin: 0px;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: -0.4em;
+    outline: none;
+}
+
+input[type="radio"] + span::before,
+input[type="radio"] + label::before{
+    content: '';
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #ec0000;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: -0.2em;
+    margin-right: 0.5em;
+    vertical-align: top;
+    pointer-events: none;
+    text-align: center;
+    transition: all 250ms ease;
+}
+
+input[type="radio"]:checked + span::before,
+input[type="radio"]:checked + label::before{
+    background-color: #ec0000;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+input[type="radio"].blue + span::before,
+input[type="radio"].blue + label::before{
+	border: 1px solid #000ec;
+	
+}
+input[type="radio"].blue:checked + span::before,
+input[type="radio"].blue:checked + label::before{
+	background-color: #0000ec;
+}
+
+input[type="radio"].green + span::before,
+input[type="radio"].green + label::before{
+	border: 1px solid #00bc00;
+	
+}
+input[type="radio"].green:checked + span::before,
+input[type="radio"].green:checked + label::before{
+	background-color: #00bc00;
+}
+/* Red is the default color
+input[type="radio"].red + span::before,
+input[type="radio"].red + label::before{
+	border: 1px solid #ec0000;
+	
+}
+input[type="radio"].red:checked + span::before,
+input[type="radio"].red:checked + label::before{
+	background-color: #ec0000;
+}
+*/
